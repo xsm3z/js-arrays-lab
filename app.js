@@ -47,7 +47,7 @@ Exercise 4: Access an array element
 Complete Exercise 4 in the space below:
 */
 
-const favFood = foods[1];
+let favFood = foods[1];
 
 console.log('Exercise 4 result:', favFood);
 
@@ -87,12 +87,12 @@ Complete Exercise 7 in the space below:
 */
 
 const yummy = [];
-foods.splice(1, 2, yummy)
-
+foods.splice(1, 2, yummy);
 
 console.log('Exercise 7 result:', yummy);
 //console.log(foods); Just wanted to see the whole array
 /*
+
 Exercise 8: Finding an index
 
 1) Using the `indexOf()` method, find the index of the string 'tofu' in the 
@@ -103,9 +103,10 @@ Exercise 8: Finding an index
 Complete Exercise 8 in the space below:
 */
 
+const soyIdx = foods.indexOf('tofu');
 
-
-//console.log('Exercise 8 result:', soyIdx);
+console.log('Exercise 8 result:', soyIdx);
+//console.log(soyIdx);
 
 /*
 Exercise 9: Joining elements
@@ -121,9 +122,9 @@ Note: The final result should log as:
 Complete Exercise 9 in the space below:
 */
 
+const allFoods = foods.join('->')
 
-
-//console.log('Exercise 9 result:', allFoods);
+console.log('Exercise 9 result:', allFoods);
 
 /*
 Exercise 10: Check for an element
