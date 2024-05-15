@@ -86,10 +86,11 @@ Exercise 7: Using the `slice()` method
 Complete Exercise 7 in the space below:
 */
 
-const yummy = [];
-foods.splice(1, 2, yummy);
+const yummy = foods.splice(1, 2,);
+foods.splice(1, 0, yummy);
 
 console.log('Exercise 7 result:', yummy);
+
 //console.log(foods); Just wanted to see the whole array
 /*
 
@@ -137,9 +138,9 @@ Exercise 10: Check for an element
 Complete Exercise 10 in the space below:
 */
 
+const hasSoup = foods.includes('soup')
 
-
-//console.log('Exercise 10 result:', hasSoup);
+console.log('Exercise 10 result:', hasSoup);
 
 /*
 Exercise 11: Odd numbers from an array
@@ -153,11 +154,11 @@ Hint: Initialize the `odds` variable to an empty array before the iteration.
 Complete Exercise 11 in the space below:
 */
 
-//const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
+const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 
 
-//console.log('Exercise 11 result:', odds);
+console.log('Exercise 11 result:', odds);
 
 /*
 Exercise 12: FizzBuzz with arrays
