@@ -92,6 +92,7 @@ foods.splice(1, 0, yummy);
 console.log('Exercise 7 result:', yummy);
 
 //console.log(foods); Just wanted to see the whole array
+
 /*
 
 Exercise 8: Finding an index
@@ -127,6 +128,8 @@ const allFoods = foods.join('->')
 
 console.log('Exercise 9 result:', allFoods);
 
+// Im uncertain of how to get the -> to show in the nested array
+
 /*
 Exercise 10: Check for an element
 
@@ -155,10 +158,13 @@ Complete Exercise 11 in the space below:
 */
 
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
+const oddNums = []
+for (let i = 0; i < nums.length; i++) {
+   if (nums[i] % 2 !== 0)
+      oddNums.push(nums[i])
+}
 
-
-
-console.log('Exercise 11 result:', odds);
+console.log('Exercise 11 result:', oddNums);
 
 /*
 Exercise 12: FizzBuzz with arrays
@@ -179,14 +185,25 @@ Exercise 12: FizzBuzz with arrays
 Complete Exercise 12 in the space below:
 */
 
-
-
-//console.log('Exercise 12 Results:');
-//console.log('  fizz:', fizz);
-//console.log('  buzz:', buzz);
-//console.log('  fizzbuzz:', fizzbuzz);
+const fizz = []
+const buzz = []
+const fizzbuzz = []
+for (let i = 0; i < nums.length; i++) {
+   if (nums[i] % 3 === 0) {
+      fizz.push(nums[i]);
+   } else if (nums[i] % 5 ===0) {
+      buzz.push(nums[i]);
+   } else if (nums[i] % 3 === 0 && nums[i] % 5 === 0) {
+      fizzbuzz.push(nums[i]);
+   }
+}
+console.log('Exercise 12 Results:');
+console.log('  fizz:', fizz);
+console.log('  buzz:', buzz);
+console.log('  fizzbuzz:', fizzbuzz);
 
 /*
+
 Exercise 13: Retrieve the Last Array
 
 1) Assign the last nested array in the `numArrays` below to a variable named
@@ -205,9 +222,12 @@ const numArrays = [
 	[7, 81, 90]
 ];
 
-//console.log('Exercise 13 result:', numList);
+const numList = numArrays[numArrays.length -1 ]; /// numArrays[numArraylength - 1] This accesses the last element of the array and I assigned it to numList. I learned this on W3S School
+
+console.log('Exercise 13 result:', numList);
 
 /*
+
 Exercise 14: Accessing within nested arrays
 
 1) Retrieve the number `66` from the `numArrays` array. As part of this process
@@ -218,11 +238,12 @@ Exercise 14: Accessing within nested arrays
 Complete Exercise 14 in the space below:
 */
 
+const num = numArrays[2][1]
 
-
-//console.log('Exercise 14 result:', num);
+console.log('Exercise 14 result:', num);
 
 /*
+
 Exercise 15: Nested array sum
 
 1) Use nested loops or `forEach()` methods to sum up all numbers within 
@@ -235,6 +256,11 @@ Hint: Be sure to declare and initialize the total variable before the iterations
 Complete Exercise 15 in the space below:
 */
 
-
-
-//console.log('Exercise 15 result:\n', total);
+let total = 0
+for (let i = 0; i < numArrays.length; i++) {
+   for (let j = 0; j < numArrays[i].length; j++) {
+      total += numArrays[i][j]
+   }
+}
+// I used W3S school and stack overflow to better understand how nested loops work
+console.log('Exercise 15 result:', total);
